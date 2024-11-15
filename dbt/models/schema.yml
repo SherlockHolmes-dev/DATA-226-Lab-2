@@ -1,0 +1,10 @@
+version: 2
+models:
+  - name: bike_summary_table
+    description: "Gives trip data for each bike"
+    columns:
+      - name: bikeId
+        description: "Unique identifier for each bike"
+        data_tests:
+          - unique
+          - not_null

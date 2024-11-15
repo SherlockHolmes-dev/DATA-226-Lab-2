@@ -1,0 +1,36 @@
+version: 2
+sources:
+  - name: raw_data
+    database: dev
+    schema: raw_data
+    description: "Schema which stores raw tables (ETL)"
+    tables:
+      - name: trip_data
+        identifier: trip_data
+        description: "Citibike trips data"
+  - name: analytics
+    database: dev
+    schema: analytics
+    description: "Schema with stores analytics tables (ELT)"
+    tables:
+      - name: trip_summary_table
+        identifier: trip_summary_table
+        description: "Summarise important points of trip data"
+      - name: user_demographic_table
+        identifier: user_demographic_table
+        description: "Shows various demographic points"
+      - name: station_summary
+        identifier: station_summary
+        description: "Gives trip statistics of stations"
+      - name: trip_duration_table
+        identifier: trip_duration_table
+        description: "Provides trip duration data"
+      - name: seasonal_trip_analysis
+        identifier: seasonal_trip_analysis
+        description: "Provides insights about season-wise trip counts"
+      - name: trip_by_days_of_week
+        identifier: trip_by_days_of_week
+        description: "Trip counts by days of the week"
+      - name: bike_summary_table
+        identifier: bike_summary_table
+        description: "Gives trip summary for all bikes"
